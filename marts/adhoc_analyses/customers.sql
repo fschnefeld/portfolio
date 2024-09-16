@@ -5,7 +5,7 @@
 }}
 with customers as (
 
-    select * from {{ ref('stg_customers') }}
+    select * from {{ ref('bigquery__stg_customers') }}
 
 ),
 
