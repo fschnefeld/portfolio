@@ -1,0 +1,24 @@
+version: 2
+
+sources:
+  - name: bigquery   # Logical name for the source
+    database: sharp-maker-413716  #project ID
+    schema: name  #BigQuery dataset name (or schema)
+    description: "This source contains raw data from the BigQuery dataset."
+
+    tables:
+      - name: customers            # Raw table name in BigQuery
+        description: "This table contains information about users."
+        columns:
+          - name: customer_id
+            description: "Primary key for the users table."
+          - name: customer_name
+            description: "The name of the user."
+
+      - name: transactions     # Another table in BigQuery
+        description: "This table contains transaction data."
+        columns:
+          - name: transaction_id
+            description: "Primary key for the transactions table."
+          - name: amount
+            description: "Transaction amount."

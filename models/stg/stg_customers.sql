@@ -1,1 +1,1 @@
-select * from {{ ref('srcs/bigquery/customers.sql') }}
+select * from {{ source('bigquery', 'customers') }}
