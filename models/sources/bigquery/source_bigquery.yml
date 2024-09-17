@@ -7,7 +7,7 @@ sources:
     description: "This source contains raw data from the BigQuery dataset."
 
     tables:
-      - name: customers-churn            # Raw table name in BigQuery
+      - name: customers-churn-us            # Raw table name in BigQuery
         description: "This table contains information about users."
         columns:
           - name: CLIENTNUM
