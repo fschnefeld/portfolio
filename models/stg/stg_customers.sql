@@ -1,1 +1,1 @@
-select * from {{ source('bigquery', 'customers') }}
+select * from {{ source('bigquery', 'customers-churn-us') }}

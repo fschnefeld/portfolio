@@ -2,18 +2,18 @@ version: 2
 
 sources:
   - name: bigquery   # Logical name for the source
-    database: sharp-maker-413716  #project ID
-    schema: name  #BigQuery dataset name (or schema)
+    database: vast-fuze-413716  #project ID
+    schema: customers-churn-us  #BigQuery dataset name (or schema)
     description: "This source contains raw data from the BigQuery dataset."
 
     tables:
-      - name: customers            # Raw table name in BigQuery
+      - name: customers-churn            # Raw table name in BigQuery
         description: "This table contains information about users."
         columns:
-          - name: customer_id
+          - name: CLIENTNUM
             description: "Primary key for the users table."
-          - name: customer_name
-            description: "The name of the user."
+          - name: Attrition_Flag
+            description: "Current attrition flag for a given customer"
 
       - name: transactions     # Another table in BigQuery
         description: "This table contains transaction data."

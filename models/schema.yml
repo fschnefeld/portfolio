@@ -4,7 +4,7 @@ models:
   - name: customers
     description: One record per customer
     columns:
-      - name: customer_id
+      - name: CLIENTNUM
         description: Primary key
         tests:
           - unique
@@ -15,7 +15,7 @@ models:
   - name: stg_customers
     description: This model cleans up customer data
     columns:
-      - name: customer_id
+      - name: CLIENTNUM
         description: Primary key
         tests:
           - unique
@@ -39,5 +39,3 @@ models:
           - relationships:
               to: ref('stg_customers')
               field: customer_id
-          - dbt_utils.equal_rowcount:
-            compare_model: ref('transactions_raw')
