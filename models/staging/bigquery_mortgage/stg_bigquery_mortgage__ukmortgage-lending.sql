@@ -9,18 +9,18 @@ source as (
 renamed as (
 
     select
-        date,
-        nl_banks,
-        nl_specialist_lenders,
-        nl_others,
-        nl_total,
-        bo_banks,
-        bo_specialist lenders,
-        bo_others,
-        bo_total,
-        lp_house_purchase,
-        lp_remortgaging,
-        lp_other
+        Date as date,
+        NL_Banks as nl_banks,
+        NL_Specialist_Lenders as nl_specialist_lenders,
+        NL_Others as nl_others,
+        NL_Total as nl_total,
+        BO_Banks as bo_banks,
+        `BO_Specialist Lenders` as bo_specialist_lenders,
+        BO_Others as bo_others,
+        BO_Total as bo_total,
+        LP_House_Purchase as lp_house_purchase,
+        LP_Remortgaging as lp_remortgaging,
+        LP_Other as lp_other
 
     from source
 
