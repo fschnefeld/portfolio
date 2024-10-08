@@ -1,0 +1,66 @@
+version: 2
+
+sources:
+  - name: bigquery_customers
+    database: vast-fuze-413716
+    schema: customers-churn-us
+    description: "This source contains raw data from the BigQuery dataset for customer churn analysis."
+
+    tables:
+      - name: customers-churn-us
+        description: "This table contains information about users in the customer churn dataset."
+        columns:
+          - name: CLIENTNUM
+            description: "Primary key for the users table."
+            tests:
+              - not_null
+              - unique
+          - name: Attrition_Flag
+            description: "Current attrition flag for a given customer, indicating whether the customer has churned."
+
+      - name: transactions
+        description: "This table contains transaction data related to customers."
+        columns:
+          - name: transaction_id
+            description: "Primary key for the transactions table."
+            tests:
+              - not_null
+              - unique
+          - name: amount
+            description: "Transaction amount for each transaction."
+
+  - name: bigquery_mortgage
+    database: vast-fuze-413716
+    schema: mortgagelending
+    description: "This source contains raw data about mortgage lending, including details on mortgage lending rates in the UK."
+
+    tables:
+      - name: ukmortgage-lending
+        description: "This table contains data about UK mortgage lending rates, broken down by lending type."
+        columns:
+          - name: Date
+            description: "Date of the mortgage lending record."
+            tests:
+              - not_null
+          - name: NL_Banks
+            description: "Net lending by banks."
+          - name: NL_Specialist_Lenders
+            description: "Net lending by specialist lenders."
+          - name: NL_Others
+            description: "Net lending by other types of institutions."
+          - name: NL_Total
+            description: "Total net lending."
+          - name: BO_Banks
+            description: "Gross lending by banks."
+          - name: BO_Specialist_Lenders
+            description: "Gross lending by specialist lenders."
+          - name: BO_Others
+            description: "Gross lending by other institutions."
+          - name: BO_Total
+            description: "Total gross lending."
+          - name: LP_House_Purchase
+            description: "Lending for house purchases."
+          - name: LP_Remortgaging
+            description: "Lending for remortgaging purposes."
+          - name: LP_Other
+            description: "Lending for other purposes."
