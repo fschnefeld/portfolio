@@ -64,3 +64,23 @@ sources:
             description: "Lending for remortgaging purposes."
           - name: LP_Other
             description: "Lending for other purposes."
+
+      - name: realestatedata
+        description: "This contains some really old realestatedata"
+        columns:
+          - name: Transaction date
+            description: "The date of a completed transaction"
+          - name: House age
+            description: "The age of the house"
+          - name: Distance to the nearest MRT station
+            description: "Distance to the nearest MRT station"
+          - name: Number of convenience stores
+            description: "Number of convenience stores"
+          - name: Latitude
+            description: "Latitude"
+          - name: Longitude
+            description: "Longitude"
+          - name: House price of unit area
+            description: "House price of unit area"
+    
+               
