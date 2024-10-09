@@ -82,5 +82,50 @@ sources:
             description: "Longitude"
           - name: House price of unit area
             description: "House price of unit area"
-    
+      - name: worldcities
+        description: "A dataset of roughly 47,000 cities with an equivalent to latitude and longitude"
+        columns:
+          - name: city
+            description: "The current city"
+          - name: city_ascii
+            description: "The current city but in ascii"
+          - name: lat
+            description: "The latitude"
+          - name: lng
+            description: "longitude"
+          - name: country
+            description: "The country"
+          - name: iso2
+            description: "iso2"
+          - name: iso3
+            description: "iso3"
+          - name: admin_name
+            description: "The admin name"
+          - name: capital
+            description: "The capital"
+          - name: population
+            description: "The amount of inhabitants"
+          - name: id
+            description: "The city id"
+      - name: taiwancities
+        description: "A dataset of roughly 47,000 cities with an equivalent to latitude and longitude"
+        columns:
+          - name: city
+            description: "The current city"
+          - name: lat
+            description: "The latitude"
+          - name: lng
+            description: "longitude"
+          - name: country
+            description: "The country"
+          - name: iso2
+            description: "iso2"
+          - name: admin_name
+            description: "The admin name"
+          - name: capital
+            description: "The capital"
+          - name: population
+            description: "The amount of inhabitants"
+          - name: population_proper
+            description: "The proper population"    
                
