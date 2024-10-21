@@ -82,5 +82,77 @@ sources:
             description: "Longitude"
           - name: House price of unit area
             description: "House price of unit area"
-    
+      - name: worldcities
+        description: "A dataset of roughly 47,000 cities with an equivalent to latitude and longitude"
+        columns:
+          - name: city
+            description: "The current city"
+          - name: city_ascii
+            description: "The current city but in ascii"
+          - name: lat
+            description: "The latitude"
+          - name: lng
+            description: "longitude"
+          - name: country
+            description: "The country"
+          - name: iso2
+            description: "iso2"
+          - name: iso3
+            description: "iso3"
+          - name: admin_name
+            description: "The admin name"
+          - name: capital
+            description: "The capital"
+          - name: population
+            description: "The amount of inhabitants"
+          - name: id
+            description: "The city id"
+      - name: taiwancities
+        description: "A dataset of roughly 47,000 cities with an equivalent to latitude and longitude"
+        columns:
+          - name: city
+            description: "The current city"
+          - name: lat
+            description: "The latitude"
+          - name: lng
+            description: "longitude"
+          - name: country
+            description: "The country"
+          - name: iso2
+            description: "iso2"
+          - name: admin_name
+            description: "The admin name"
+          - name: capital
+            description: "The capital"
+          - name: population
+            description: "The amount of inhabitants"
+          - name: population_proper
+            description: "The proper population"
+  - name: coloplast
+    database: vast-fuze-413716  # Replace with the actual database name
+    schema: coloplast  # Replace with the actual schema name if different
+    tables:
+      - name: supplychaindata
+        description: "This table contains supply chain data including product orders, suppliers, delivery details, and costs."
+        columns:
+          - name: product_name
+            description: "Name of the product being ordered."
+          - name: quantity
+            description: "Quantity of the product ordered."
+          - name: supplier_name
+            description: "Name of the supplier providing the product."
+          - name: purchase_date
+            description: "Date when the product order was placed."
+          - name: unit_price
+            description: "Price per unit of the product."
+          - name: total_cost
+            description: "Total cost of the product order."
+          - name: delivery_address
+            description: "Address where the product is to be delivered."
+          - name: delivery_date
+            description: "Date when the product was delivered."
+          - name: received_by
+            description: "Person who received the delivery."
+          - name: status
+            description: "Current status of the product order (e.g., shipped, delivered)."     
                
