@@ -154,5 +154,24 @@ sources:
           - name: received_by
             description: "Person who received the delivery."
           - name: status
-            description: "Current status of the product order (e.g., shipped, delivered)."     
+            description: "Current status of the product order (e.g., shipped, delivered)."
+      - name: gas_stations_london
+        description: "Model containing gas station information in London, with customer reviews and ratings."
+        columns:
+        - name: brand_name
+          description: "Brand name of the gas station."
+        - name: full_address
+          description: "Full physical location."
+        - name: official_website_url
+          description: "Official website URL."
+        - name: contact_phone_number
+          description: "Contact telephone number."
+        - name: average_customer_rating
+          description: "Average customer rating."
+        - name: relative_ranking
+          description: "Relative ranking among listed stations."
+        - name: customer_reviews_count
+          description: "Number of customer reviews."
+        - name: category
+          description: "Designated as 'Gas station'."     
                
